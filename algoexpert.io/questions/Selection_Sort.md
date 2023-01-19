@@ -20,3 +20,24 @@ We can use a Stack here
 
 Check this [Python](../python/Selection_Sort.py) code.
 
+JAVASCRIPT
+```
+function selectionSort(array) {
+  // Write your code here.
+  const NewArr = [];
+
+  do {
+    let result = array.reduce((prev, curr) => {
+    return prev <  curr ? prev : curr
+    })
+    console.log(result)
+    let itemIndex = array.indexOf(result);
+    console.log(itemIndex)
+    NewArr.push(result)
+    array.splice(itemIndex, 1);
+  } while (array.length > 0)
+  
+
+  return NewArr
+}
+```
